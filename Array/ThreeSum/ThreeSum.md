@@ -17,7 +17,8 @@
 
 （4）nums[R]===nums[R-1],跳过
 
-### [leetcode链接](https://leetcode-cn.com/problems/3sum/)
+### leetcode题目链接 
+https://leetcode-cn.com/problems/3sum/
 
 
 

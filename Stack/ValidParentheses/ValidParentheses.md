@@ -6,7 +6,8 @@
 如果不是，返回false,不匹配;
 3. 最后，如果栈里面元素清空，返回true，匹配; 如果栈里面元素未清空，返回false，不匹配;
 
-### [leetcode链接](https://leetcode-cn.com/problems/valid-parentheses/)
+### leetcode题目链接 
+https://leetcode-cn.com/problems/valid-parentheses/
 
 
 

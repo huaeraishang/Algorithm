@@ -5,7 +5,8 @@
 2. 算出数组中间位置
 
 
-#### [leetcode](https://leetcode-cn.com/problems/majority-element/)
+#### leetcode题目链接：
+https://leetcode-cn.com/problems/majority-element/
 
 
 

@@ -6,7 +6,8 @@
 3. 空数组，默认返回1
 
 
-#### [leetcode](https://leetcode-cn.com/problems/first-missing-positive/)
+#### leetcode题目链接：
+https://leetcode-cn.com/problems/first-missing-positive/
 
 
 
