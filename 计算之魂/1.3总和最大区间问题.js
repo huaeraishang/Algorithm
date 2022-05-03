@@ -49,22 +49,22 @@ const findSumMax3 = (datas)=> {
         let maxRangeSum = 0
         let maxSubRange = [0,0]
         let q = p + ((k - p) >> 1)
-        console.log('p,q,k is ', p, q, k)
+        // console.log('p,q,k is ', p, q, k)
         if(p > k) {
             maxRangeSum = 0
             return { maxRangeSum, maxSubRange }
         } else if (p === k) {
             maxRangeSum = datas[p]
             maxSubRange = [p, k]
-            console.log('222 maxRangeSum == ', maxRangeSum)
-            console.log('222 maxSubRange == ', maxSubRange)
+            // console.log('222 maxRangeSum == ', maxRangeSum)
+            // console.log('222 maxSubRange == ', maxSubRange)
             return { maxRangeSum, maxSubRange }
         }
         const left = findRangeSum(datas, p, q)
         const right = findRangeSum(datas, q+1, k)
 
-        console.log('111 left.maxSubRange == ', left.maxSubRange)
-        console.log('111 right.maxSubRange == ', right.maxSubRange)
+        // console.log('111 left.maxSubRange == ', left.maxSubRange)
+        // console.log('111 right.maxSubRange == ', right.maxSubRange)
 
         // console.log('maxSubRange == ', right.maxSubRange[0], left.maxSubRange[1])
 
