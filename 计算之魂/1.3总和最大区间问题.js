@@ -163,7 +163,7 @@ const findSumMax3 = (datas)=> {
 
 console.log('findSumMax3 is ', findSumMax3(datas))
 
-// 时间复杂度O(n) 动态规划
+// 时间复杂度O(n) 动态规划 参考leetcode 53题 最大子数组和
 const findSumMax4 = (datas)=> {
     let maxSum = datas[0]
     let pre = 0
