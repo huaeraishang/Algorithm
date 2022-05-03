@@ -4,7 +4,7 @@ console.log('result = ', result)
 
 // 时间复杂度O(n3)
 const findSumMax1 = (datas)=> {
-    let maxSum = 0
+    let maxSum = -Infinity
     let maxRange = []
     for(let p=0; p<datas.length; p++) {
         for(let q=p; q<datas.length; q++) {
@@ -25,7 +25,7 @@ console.log('findSumMax1 is ', findSumMax1(datas))
 
 // 时间复杂度O(n2)
 const findSumMax2 = (datas)=> {
-    let maxSum = 0
+    let maxSum = -Infinity
     let maxRange = []
     for(let p=0; p<datas.length; p++) {
         let orgSum = 0
@@ -43,7 +43,7 @@ const findSumMax2 = (datas)=> {
 
 console.log('findSumMax2 is ', findSumMax2(datas))
 
-// 时间复杂度O(nlogn)
+// 时间复杂度O(nlogn) 分治
 const findSumMax3 = (datas)=> {
     const findRangeSum = (datas, p, k) => {
         let maxRangeSum = 0
@@ -162,3 +162,32 @@ const findSumMax3 = (datas)=> {
 }
 
 console.log('findSumMax3 is ', findSumMax3(datas))
+
+// 时间复杂度O(n) 动态规划
+const findSumMax4 = (datas)=> {
+    let maxSum = datas[0]
+    let pre = 0
+    let maxRange = []
+    let leftIndex = 0
+    let rightIndex = 0
+    let resultLeftIndex = 0
+    let resultRightIndex = 0
+    datas.forEach((el, index) => {
+        if(el > pre + el) {
+            leftIndex = index
+            pre = el
+        } else {
+            rightIndex = index
+            pre = pre + el
+        }
+        if(pre > maxSum) {
+            resultLeftIndex = leftIndex
+            resultRightIndex = rightIndex
+            maxSum = pre
+        }
+    })
+    maxRange = [resultLeftIndex, resultRightIndex]
+    return { maxSum, maxRange }
+}
+
+console.log('findSumMax4 is ', findSumMax4(datas))
